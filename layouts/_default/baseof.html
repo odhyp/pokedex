@@ -4,13 +4,13 @@
   {{ partial "head.html" . }}
 </head>
 <body>
-  <header>
+  <header class="container">
     {{ partial "header.html" . }}
   </header>
-  <main>
+  <main id="main-section">
     {{ block "main" . }}{{ end }}
   </main>
-  <footer>
+  <footer class="bg-dark py-3">
     {{ partial "footer.html" . }}
   </footer>
 </body>
