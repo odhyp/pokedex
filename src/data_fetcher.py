@@ -6,7 +6,7 @@ class DataFetcher:
     A class to fetch data related to Pokémon from the PokéAPI.
     """
 
-    def fetch_pokemon_data(self, pokemon_id):
+    def fetch_pokemon_data(self, pokemon_id: int) -> dict:
         """
         Fetches data for a specific Pokémon by ID.
 
@@ -25,7 +25,7 @@ class DataFetcher:
             print(f"Failed to fetch data for Pokémon ID: {pokemon_id}")
             return None
 
-    def fetch_pokemon_species_data(self, pokemon_id):
+    def fetch_pokemon_species_data(self, pokemon_id: int) -> dict:
         """
         Fetches species data for a specific Pokémon by ID.
 
