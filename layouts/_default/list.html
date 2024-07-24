@@ -1,8 +1,33 @@
 {{ define "main" }}
-  <h1>{{ .Title }}</h1>
-  {{ .Content }}
-  {{ range .Pages }}
-    <h2><a href="{{ .RelPermalink }}">{{ .LinkTitle }}</a></h2>
-    {{ .Summary }}
-  {{ end }}
+
+<section class="list-page">
+  <div class="container">
+    <!-- Cards -->
+    <div class="row justify-content-center justify-content-md-start gy-4">
+      {{ range .Pages }}
+      <!-- Card Start -->
+      <div class="col-12 col-md-6 col-lg-4 col-xxl-3">
+        <div class="card">
+          <div class="position-relative">
+            <a class="d-flex border rounded shadow-sm text-reset text-decoration-none py-3 px-3" href="{{ .RelPermalink }}">
+              <!-- Card Content -->
+              <div class="col-6 d-flex flex-column">
+                <span>#{{ .Params.ID }}</span>
+                <h2 class="fs-5 text-capitalize">{{ .Params.Name }}</h2>
+                <span class="badge text-bg-dark text-capitalize">grass</span>
+                <span class="badge text-bg-dark text-capitalize">poison</span>
+              </div>
+
+              <!-- Card Image -->
+              <img class="col-6" src="{{ .Params.Sprites }}" alt="" loading="lazy">
+            </a>
+          </div>
+        </div>
+      </div>
+      {{ end }}
+      <!-- Cards End -->
+    </div>
+  </div>
+</section>
+
 {{ end }}
