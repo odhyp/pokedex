@@ -19,7 +19,7 @@ def load_data(number_of_pokemon):
 
         # Generates markdown
         generator = GenerateContent()
-        generator.generate_markdown(file_name=str(i),
+        generator.generate_markdown(file_name=str(i).zfill(3),
                                     base_data=base_data,
                                     species_data=species_data)
 
@@ -34,8 +34,8 @@ def clear_content():
 
 
 def main():
-    load_data(NUMBER_OF_POKEMON)
     # clear_content()
+    load_data(NUMBER_OF_POKEMON)
 
 
 if __name__ == '__main__':
