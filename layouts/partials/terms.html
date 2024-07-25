@@ -14,7 +14,7 @@ For a given taxonomy, renders a list of terms assigned to the page.
   {{- $label := (index . 0).Parent.LinkTitle }}
     {{- range . }}
       <div class="{{ (print $label) | lower }}">
-        <span class="badge text-bg-secondary">{{ .LinkTitle }}</span>
+        <span class="{{ (print $label) | lower }}-{{ .LinkTitle | lower }} badge text-bg-secondary">{{ .LinkTitle }}</span>
       </div>
     {{- end }}
 {{- end }}

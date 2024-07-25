@@ -14,8 +14,7 @@
               <div class="col-6 d-flex flex-column">
                 <span>#{{ .Params.ID }}</span>
                 <h2 class="fs-5 text-capitalize">{{ .Params.Name }}</h2>
-                <span class="badge text-bg-dark text-capitalize">grass</span>
-                <span class="badge text-bg-dark text-capitalize">poison</span>
+                {{ partial "terms.html" (dict "taxonomy" "types" "page" .) }}
               </div>
 
               <!-- Card Image -->
