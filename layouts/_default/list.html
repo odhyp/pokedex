@@ -9,17 +9,19 @@
       <div class="col-12 col-md-6 col-lg-4 col-xxl-3">
         <div class="card">
           <div class="position-relative">
-            <a class="d-flex border rounded shadow-sm text-reset text-decoration-none py-3 px-3" href="{{ .RelPermalink }}">
+            <div class="d-flex rounded shadow-sm py-4 px-4 py-md-3 px-md-3">
               <!-- Card Content -->
-              <div class="col-6 d-flex flex-column">
-                <span>#{{ .Params.ID }}</span>
-                <h2 class="fs-5 text-capitalize">{{ .Params.Name }}</h2>
+              <div class="col-6 d-flex flex-column gap-1">
+                <span class="fw-bold text-black text-opacity-50 mb-3">#{{ .Params.ID }}</span>
+                <a class="fs-5 text-capitalize text-reset text-decoration-none mb-2" href="{{ .RelPermalink }}">{{ .Params.Name }}</a>
                 {{ partial "terms.html" (dict "taxonomy" "types" "page" .) }}
               </div>
 
               <!-- Card Image -->
-              <img class="col-6" src="{{ .Params.Sprites }}" alt="" loading="lazy">
-            </a>
+              <a class="col-6 text-center" href="{{ .RelPermalink }}">
+                <img class="col-12 img-fluid" src="{{ .Params.Sprites }}" alt="{{ .Params.Name | title }} Sprite" loading="lazy">
+              </a>
+            </div>
           </div>
         </div>
       </div>
