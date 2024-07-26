@@ -1,0 +1,17 @@
+{{ define "main" }}
+
+<section class="types-page">
+  <div class="container">
+    <div class="row gy-4 justify-content-center justify-content-sm-start">
+      {{ range .Pages }}
+      <div class="col-8 col-sm-6 col-md-4 col-lg-3 col-xl-2">
+        <div class="card shadow-sm py-2 text-center types-{{ .LinkTitle | lower }}">
+          <a class="fw-bold text-decoration-none text-white types-{{ .LinkTitle | lower }}" href="{{ .RelPermalink }}">{{ .Title }}</a>
+        </div>
+      </div>
+      {{ end }}
+    </div>
+  </div>
+</section>
+
+{{ end }}
