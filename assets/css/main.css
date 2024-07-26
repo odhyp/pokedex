@@ -18,7 +18,7 @@ section {
 }
 
 .types > * {
-  color: #EEE !important;
+  color: #FFFFFF !important;
 }
 
 .types-normal {
@@ -35,6 +35,7 @@ section {
 
 .types-electric {
   background-color: #F7D02C !important;
+  color: black !important;
 }
 
 .types-grass {
@@ -43,6 +44,7 @@ section {
 
 .types-ice {
   background-color: #96D9D6 !important;
+  color: black !important;
 }
 
 .types-fighting {
