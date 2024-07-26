@@ -1,6 +1,6 @@
 +++
 title = 'Types'
-layout = 'list'
+layout = 'types'
 +++
 
 ## This is types list
